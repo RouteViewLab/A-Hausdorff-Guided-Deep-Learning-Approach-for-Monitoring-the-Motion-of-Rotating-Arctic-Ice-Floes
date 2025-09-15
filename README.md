@@ -46,7 +46,7 @@ Please ensure the following dependencies are installed:
     marginal ice zones.
 
 -   Example data used in the paper (July 6, 2020, B4 floe sample) are
-    provided in the data/ directory.
+    provided in the main.
 
 -   Users may organize their own datasets following the structure below
 
