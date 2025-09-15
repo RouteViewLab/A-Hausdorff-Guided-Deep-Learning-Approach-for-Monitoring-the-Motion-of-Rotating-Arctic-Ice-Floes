@@ -106,12 +106,15 @@ Example Experiment (B4 Floe, July 6, 2020)
 A demo script is provided to reproduce the **B4 floe matching
 experiment** described in the paper.
 
--   this experiment demonstrates the ability of the proposed framework
+-   This experiment demonstrates the ability of the proposed framework
     to achieve robust matching under rotation and texture loss.
 
 -   Please note that results may slightly differ from those reported in
     the manuscript due to variations in PyTorch and related library
     versions.
+
+-   Only a subset of the experimental data is provided here; please contact us if you require access to the full dataset.
+
 
   ## Results
 
