@@ -14,7 +14,8 @@ Sciences, Lanzhou 730000, China
     Floes\"]{.underline}](https://ieeexplore.ieee.org/document/9627165).
     More specifically, it is detailed as follow.
 
-![Flow chart](https://github.com/LZUFE-Machine-Learning/A-Hausdorff-Guided-Deep-Learning-Approach-for-Motion-Monitoring-of-Rotating-Arctic-Ice-Floes/raw/main/flowchart.png)
+![Flow chart](https://github.com/LZUFE-Machine-Learning/A-Hausdorff-Guided-Deep-Learning-Approach-for-Motion-Monitoring-of-Rotating-Arctic-Ice-Floes/raw/main/flow_chat.png)
+
 
 
 ## Overview
