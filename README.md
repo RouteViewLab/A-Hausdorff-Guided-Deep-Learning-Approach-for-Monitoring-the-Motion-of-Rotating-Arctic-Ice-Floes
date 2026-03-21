@@ -5,18 +5,16 @@ Preliminary Experiment on Complex Ice Floe Motion Monitoring Based on Deep Learn
 -   Key Laboratory of Cryospheric Science and Frozen Soil Engineering,
 Heihe Remote Sensing Experimental Research Station, Northwest
 Institute of Eco-Environment and Resources, Chinese Academy of
-Sciences, Lanzhou 730000, China
-
-    This repository is designed to present a preliminary experiment on complex ice floe motion monitoring based on deep learning architectures, highlighting the impact of rotation and deformation on feature matching performance.
-    More specifically, it is detailed as follow.
-
-![Flow chart](https://github.com/RouteViewLab/A-Hausdorff-Guided-Deep-Learning-Approach-for-Monitoring-the-Motion-of-Rotating-Arctic-Ice-Floes/raw/main/Flow%20chat.png)
+Sciences, Lanzhou 730000, China   
 
 ## 🧭 Overview
 
 This repository is developed to support and demonstrate the preliminary study on complex sea ice motion monitoring based on deep learning architectures:
 
 The project is motivated by our finding that **rotation and deformation of ice floes are primary factors leading to the failure of traditional feature matching methods**. To address this issue, we construct a complete experimental pipeline integrating **geometric modeling (Hausdorff distance)** and **deep feature learning (SuperPoint + SuperGlue)**.
+More specifically, it is detailed as follow.
+
+![Flow chart](https://github.com/RouteViewLab/A-Hausdorff-Guided-Deep-Learning-Approach-for-Monitoring-the-Motion-of-Rotating-Arctic-Ice-Floes/raw/main/Flow%20chat.png)
 
 ---
 
