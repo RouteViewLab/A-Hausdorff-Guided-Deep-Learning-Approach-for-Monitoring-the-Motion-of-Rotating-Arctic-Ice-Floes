@@ -73,7 +73,7 @@ Includes the implementation of the deep learning framework:
 
 ### 📈 Quantitative Analysis
 
-![HD vs Rotation Angle](https://raw.githubusercontent.com/LZUFE-Machine-Learning/A-Hausdorff-Guided-Deep-Learning-Approach-for-Monitoring-the-Motion-of-Rotating-Arctic-Ice-Floes/main/Variation%20of%20Hausdorff%20Distance%20with%20Rotation%20Angle.png))
+![HD vs Rotation Angle](https://raw.githubusercontent.com/LZUFE-Machine-Learning/A-Hausdorff-Guided-Deep-Learning-Approach-for-Monitoring-the-Motion-of-Rotating-Arctic-Ice-Floes/main/Variation%20of%20Hausdorff%20Distance%20with%20Rotation%20Angle.png)
 
 This figure shows the variation of **Hausdorff Distance (HD)** with respect to rotation angle for ice floe **B2**.
 
@@ -121,7 +121,7 @@ Key advantages:
 ## **Acknowledgments**
 
 The codes are based
-on [S](https://github.com/hanyoseob/pytorch-noise2void)uperPoint and [S](https://github.com/DegangWang97/IEEE_TGRS_BS3LNet)uperGlue.
+on [SuperPoint](https://github.com/hanyoseob/pytorch-noise2void) and [SuperGlue](https://github.com/DegangWang97/IEEE_TGRS_BS3LNet).
 Thanks for their awesome work.
 
 ## **Contact**
