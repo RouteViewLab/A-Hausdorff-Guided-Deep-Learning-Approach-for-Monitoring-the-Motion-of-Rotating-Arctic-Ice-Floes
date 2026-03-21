@@ -1,128 +1,123 @@
-A Hausdorff-Guided Deep Learning Approach for Monitoring
-the Motion of Rotating Arctic Ice Floes
+Preliminary Experiment on Complex Ice Floe Motion Monitoring Based on Deep Learning Architectures
 
--   Authors: Adan Wu, Tao Che∗, Chengzhu Ji, Xiaowen Zhu, Jinlei Chen, Qingchao Xu, Qun Gu, Rui Zhang,
-Kaihui Zhang, Lei Fu, and Shengpeng Chen
+-   Authors: Adan Wu
 
 -   Key Laboratory of Cryospheric Science and Frozen Soil Engineering,
 Heihe Remote Sensing Experimental Research Station, Northwest
 Institute of Eco-Environment and Resources, Chinese Academy of
 Sciences, Lanzhou 730000, China
 
-    The code in this toolbox implements the [[\"A Hausdorff-Guided Deep
-    Learning Approach for Motion Monitoring of Rotating Arctic Ice
-    Floes\"]{.underline}](https://ieeexplore.ieee.org/document/9627165).
+    This repository is designed to present a preliminary experiment on complex ice floe motion monitoring based on deep learning architectures, highlighting the impact of rotation and deformation on feature matching performance.
     More specifically, it is detailed as follow.
 
 ![Flow chart](https://github.com/RouteViewLab/A-Hausdorff-Guided-Deep-Learning-Approach-for-Monitoring-the-Motion-of-Rotating-Arctic-Ice-Floes/raw/main/Flow%20chat.png)
 
-## Overview
+## 🧭 Overview
 
-This repository provides the implementation of our proposed ice floe
-motion monitoring framework, which integrates **geometric selection**
-and **intelligent feature matching**. The method combines
-Hausdorff-based geometric selection, SuperPoint feature extraction, and
-SuperGlue feature matching to address challenges of texture degradation
-and rotational variations in Arctic ice floe imagery.
+This repository is developed to support and demonstrate the preliminary study on complex sea ice motion monitoring based on deep learning architectures:
 
-The source code is implemented in **PyTorch**, with training and testing
-pipelines designed to reproduce the results reported in our manuscript
-submitted.
-### **Requirements**
+The project is motivated by our finding that **rotation and deformation of ice floes are primary factors leading to the failure of traditional feature matching methods**. To address this issue, we construct a complete experimental pipeline integrating **geometric modeling (Hausdorff distance)** and **deep feature learning (SuperPoint + SuperGlue)**.
 
-Please ensure the following dependencies are installed:
+---
 
--   Python \>= 3.11
+## 📂 Repository Structure
 
--   PyTorch \>= 1.6
+The repository consists of **six main folders**, covering the full workflow:
 
--   NumPy, SciPy, OpenCV
+### 1. Source Data
+Contains all **226 Arctic ice floe images**, which are fully utilized for the deep learning framework.
 
--   Matplotlib (for visualization)
+---
 
-## Data Preparation
+### 2. Ice Floe Data for the Experiment
+Includes:
+- Original ice floe imagery  
+- Preprocessed data used in experiments  
 
--   The datasets consist of optical imagery acquired from Arctic
-    marginal ice zones.
+This folder reflects the **data preparation and preprocessing pipeline**.
 
--   Example data used in the paper (July 6, 2020, B4 floe sample) are
-    provided in the main.
+---
 
--   Users may organize their own datasets following the structure below
+### 3. Traditional Methods Results
+Provides feature extraction and matching results using:
+- SIFT  
+- A-KAZE  
 
-    datasets/ (\$DATA_DIR)
+These results serve as **baseline comparisons**, highlighting the limitations of traditional methods under rotation and deformation.
 
-    \|\-- Dataset
+---
 
-    \| \|\-- train2014
+### 4. Experimental Results
+Contains:
+- Ice floe motion monitoring results between consecutive days  
+- Vector maps of short-term continuous motion trajectories  
 
-    \| \| \|\-- file1.jpg
+This folder demonstrates the **effectiveness of the proposed method in real scenarios**.
 
-    \| \| \`\-- \...
+---
 
-    \| \`\-- val2014
+### 5. Influence of Ice Floe Rotation
+Focuses on the **preliminary experiment on rotation effects**, including:
+- Spatial visualization under **72 rotation angles (5° interval)**  
+- Quantitative evaluation of matching performance under rotation  
 
-    \| \|\-- file1.jpg
+---
 
-    \| \`\-- \...
+### 6. Code
+Includes the implementation of the deep learning framework:
+- Network architecture (SuperPoint / SuperGlue-based)  
+- Data preprocessing modules  
+- Training and testing pipelines
 
-## Training
+---
 
-The training procedure is designed for reproducibility and can be
-customized with different network hyperparameters.
+## 🔬 Preliminary Experiment: Impact of Rotation
 
-python train4.py train_base configs/magicpoint_shapes_pair.yaml
-magicpoint_synth \--eval
+### 📈 Quantitative Analysis
 
-python train4.py train_joint
-configs/superpoint_dataset_train_heatmap.yaml superpoint_my_data \--eval
-\--debug
+![HD vs Rotation Angle](https://raw.githubusercontent.com/LZUFE-Machine-Learning/A-Hausdorff-Guided-Deep-Learning-Approach-for-Monitoring-the-Motion-of-Rotating-Arctic-Ice-Floes/main/Variation%20of%20Hausdorff%20Distance%20with%20Rotation%20Angle.png))
 
-python train.py \--feature_dim 256 \--dataset_offline_rebuild 1
-\--batch_size 32 \--debug 0 \--eval \--viz
+This figure shows the variation of **Hausdorff Distance (HD)** with respect to rotation angle for ice floe **B2**.
 
-Options:
+- Minimum HD (**3.16**) occurs at approximately **40°**, indicating optimal alignment  
+- Maximum HD (**118.07**) reflects severe mismatch  
+- Strong nonlinearity indicates high sensitivity to rotation  
 
--   \--threshold_keypoint: 0.001
+👉 **Insight:**  
+Rotation drastically alters geometric similarity, making direct matching unreliable.
 
--   \--threshold_match: 0.1
+---
 
--   \--lr: 1 × 10⁻⁴
+### 🖼️ Qualitative Comparison
 
--   \--epochs: 500
+![Rotation Comparison](https://raw.githubusercontent.com/LZUFE-Machine-Learning/A-Hausdorff-Guided-Deep-Learning-Approach-for-Monitoring-the-Motion-of-Rotating-Arctic-Ice-Floes/main/Rotation%20Comparison%20Chart.png)
 
-## Testing
+#### 🔹 Before Rotation Alignment
+- Feature matches are **disordered and inconsistent**  
+- Significant geometric deviation  
+- High mismatch rate  
 
-Testing can be performed on the held-out dataset or on provided floe
-samples.
+#### 🔹 After Rotation Alignment (~40°)
+- Ice floe is **well aligned**  
+- Matches become **structured and reliable**  
+- Significant improvement in accuracy  
 
-python test.py \--model checkpoints/model_best.pth \--data data/test/
+---
 
-This will output matched pairs, matching accuracy, and visualization
-results under the results/ folder.
+## 🚀 Method Overview
 
-Example Experiment (B4 Floe, July 6, 2020)
+This repository implements a **rotation-aware deep learning framework** that integrates:
 
-A demo script is provided to reproduce the **B4 floe matching
-experiment** described in the paper.
+- **Hausdorff Distance** → rotation estimation  
+- **SuperPoint** → feature extraction  
+- **SuperGlue** → feature matching  
 
--   This experiment demonstrates the ability of the proposed framework
-    to achieve robust matching under rotation and texture loss.
+Key advantages:
+- Robust to **large rotation**
+- Handles **low-texture regions**
+- Improves **matching accuracy and stability**
 
--   Please note that results may slightly differ from those reported in
-    the manuscript due to variations in PyTorch and related library
-    versions.
-
--   Only a subset of the experimental data is provided here; please contact us if you require access to the full dataset.
-
-
-  ## Results
-
-| Method          | Matching Pairs | Matched Accuracy |
-|-----------------|----------------|------------------|
-| Proposed method | 50             | 100%             |
-| SIFT            | 15             | 40%              |
-| A-KAZE          | 19             | 68.42%           |
+---
 
 
 ## **Acknowledgments**
