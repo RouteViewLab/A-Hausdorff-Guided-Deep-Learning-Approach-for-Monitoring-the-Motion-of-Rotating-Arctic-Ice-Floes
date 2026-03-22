@@ -1,6 +1,7 @@
 # **Preliminary Experiment on Complex Ice Floe Motion Monitoring Based on Deep Learning Architectures**
 
--   Authors: Adan Wu
+- Authors: Adan Wu, Tao Che*, Chengzhu Ji, Xiaowen Zhu, Jinlei Chen, Qingchao Xu, Qun Gu, Rui Zhang,  
+Kaihui Zhang, Lei Fu, and Shengpeng Chen  
 
 -   Key Laboratory of Cryospheric Science and Frozen Soil Engineering,
 Heihe Remote Sensing Experimental Research Station, Northwest
@@ -45,19 +46,33 @@ These results serve as **baseline comparisons**, highlighting the limitations of
 
 ---
 
-### 4. Experimental Results
-Contains:
-- Ice floe motion monitoring results between consecutive days  
-- Vector maps of short-term continuous motion trajectories  
+### 4. Deep Learning Experimental Results
+This folder primarily presents the **deep learning-based experimental results** of the proposed framework.
+
+It contains:
+
+- Ice floe motion monitoring results between consecutive days obtained using the proposed deep learning model  
+- Vector maps illustrating short-term continuous motion trajectories generated from learned feature correspondences  
 
 This folder demonstrates the **effectiveness of the proposed method in real scenarios**.
+### 🔍 Case Study: B4 Ice Floe Comparison
+
+To further demonstrate the superiority of the proposed deep learning approach, we provide a comparative analysis using the **B4 ice floe (July 6, 2020)** as a representative example.
+
+
+| Method              | Matching Pairs | Matched Accuracy |
+|---------------------|----------------|------------------|
+| **Proposed method **| **50**         | **100%**         |
+| SIFT                | 15             | 40%              |
+| A-KAZE              | 19             | 68.42%           |
 
 ---
 
-### 5. Influence of Ice Floe Rotation
-Focuses on the **preliminary experiment on rotation effects**, including:
+### 5.Influence of Ice Floe Rotation on Deep Learning-Based Monitoring
+This folder focuses on the **impact of ice floe rotation on the performance of the deep learning-based monitoring framework**, including:
+
 - Spatial visualization under **72 rotation angles (5° interval)**  
-- Quantitative evaluation of matching performance under rotation  
+- Quantitative evaluation of **deep learning-based matching performance** under varying rotation conditions  
 
 ---
 
