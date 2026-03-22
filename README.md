@@ -55,14 +55,13 @@ It contains:
 - Vector maps illustrating short-term continuous motion trajectories generated from learned feature correspondences  
 
 This folder demonstrates the **effectiveness of the proposed method in real scenarios**.
-### 🔍 Case Study: B4 Ice Floe Comparison
 
 To further demonstrate the superiority of the proposed deep learning approach, we provide a comparative analysis using the **B4 ice floe (July 6, 2020)** as a representative example.
 
 
 | Method              | Matching Pairs | Matched Accuracy |
 |---------------------|----------------|------------------|
-| **Proposed method **| **50**         | **100%**         |
+| **Proposed method** | **50** | **100%** |
 | SIFT                | 15             | 40%              |
 | A-KAZE              | 19             | 68.42%           |
 
