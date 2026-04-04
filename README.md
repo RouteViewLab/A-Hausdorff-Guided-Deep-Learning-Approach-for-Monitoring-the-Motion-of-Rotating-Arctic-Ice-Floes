@@ -12,10 +12,19 @@ Sciences, Lanzhou 730000, China
 
 This repository is developed to support and demonstrate the preliminary study on complex sea ice motion monitoring based on deep learning architectures:
 
-The project is motivated by our finding that **rotation and deformation of ice floes are primary factors leading to the failure of traditional feature matching methods**. To address this issue, we construct a complete experimental pipeline integrating **geometric modeling (Hausdorff distance)** and **deep feature learning (SuperPoint + SuperGlue)**.
-More specifically, it is detailed as follow.
+The project is motivated by our finding that **rotation and deformation of ice floes are primary factors leading to the failure of traditional feature matching methods**. To address this issue, we develop a framework that integrates **geometric modeling (Hausdorff distance)** with **deep feature learning (SuperPoint + SuperGlue)**.
 
-![Flow chart](https://github.com/RouteViewLab/A-Hausdorff-Guided-Deep-Learning-Approach-for-Monitoring-the-Motion-of-Rotating-Arctic-Ice-Floes/raw/main/Flow%20chat.png)
+More specifically, the deep learning component of our framework is built upon two key modules: **SuperPoint** for interest point detection and description, and **SuperGlue** for feature matching. Their network architectures are illustrated below.
+
+<div align="center">
+  <img src="https://github.com/RouteViewLab/A-Hausdorff-Guided-Deep-Learning-Approach-for-Monitoring-the-Motion-of-Rotating-Arctic-Ice-Floes/raw/main/SuperPoint%20Network.png" width="600"/>
+</div>
+
+<div align="center">
+  <img src="https://github.com/RouteViewLab/A-Hausdorff-Guided-Deep-Learning-Approach-for-Monitoring-the-Motion-of-Rotating-Arctic-Ice-Floes/raw/main/SuperGlue%20Network.png" width="600"/>
+</div>
+
+In this framework, **SuperPoint** is employed to extract rotation-invariant keypoints and descriptors, while **SuperGlue** performs context-aware feature matching through graph neural network-based attention mechanisms. 
 
 ---
 
