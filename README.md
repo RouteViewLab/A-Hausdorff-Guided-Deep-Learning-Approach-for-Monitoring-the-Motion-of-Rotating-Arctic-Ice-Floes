@@ -12,7 +12,9 @@ Sciences, Lanzhou 730000, China
 
 This repository is developed to support and demonstrate the preliminary study on complex sea ice motion monitoring based on deep learning architectures:
 
-The project is motivated by our finding that **rotation and deformation of ice floes are primary factors leading to the failure of traditional feature matching methods**. To address this issue, we develop a framework that integrates **geometric modeling (Hausdorff distance)** with **deep feature learning (SuperPoint + SuperGlue)**.
+The study is motivated by the observation that **rotation and deformation of ice floes are the primary factors causing traditional feature matching methods to fail**. To address this challenge, the proposed framework integrates **geometric modeling (Hausdorff distance)** with **deep feature learning (SuperPoint + SuperGlue)**.
+
+Specifically, the deep learning component consists of two key modules: **SuperPoint** for interest point detection and description, and **SuperGlue** for feature matching. Their network architectures are illustrated below.
 
 More specifically, the deep learning component of our framework is built upon two key modules: **SuperPoint** for interest point detection and description, and **SuperGlue** for feature matching. Their network architectures are illustrated below.
 
@@ -35,7 +37,7 @@ In this framework, **SuperPoint** is employed to extract rotation-invariant keyp
 The repository consists of **six main folders**, covering the full workflow:
 
 ### 1. Source Data
-Contains all **226 Arctic ice floe images**, which are fully utilized for the deep learning framework.
+This folder contains all **226 Arctic ice floe images**, which are fully utilized for the deep learning framework.
 
 ---
 
@@ -48,8 +50,8 @@ This folder reflects the **data preparation and preprocessing pipeline**.
 
 ---
 
-### 3. Traditional Methods Results
-Provides feature extraction and matching results using:
+### 3. Extraction and Matching Results of Traditional Methods for Ice Floe Monitoring
+This folder provides feature extraction and matching results using:
 - SIFT  
 - A-KAZE  
 
@@ -70,7 +72,7 @@ This folder demonstrates the **effectiveness of the proposed method in real scen
 To further demonstrate the superiority of the proposed deep learning approach, we provide a comparative analysis using the **B4 ice floe (July 6, 2020)** as a representative example.
 
 
-| Method              | Matching Pairs | Matched Accuracy |
+| Method              | Matching Pairs |  Matching Accuracy |
 |---------------------|----------------|------------------|
 | **Proposed method** | **50** | **100%** |
 | SIFT                | 15             | 40%              |
@@ -78,7 +80,7 @@ To further demonstrate the superiority of the proposed deep learning approach, w
 
 ---
 
-### 5.Influence of Ice Floe Rotation on Deep Learning-Based Monitoring
+### 5. Influence of Ice Floe Rotation on Deep-Model Matching
 This folder focuses on the **impact of ice floe rotation on the performance of the deep learning-based monitoring framework**, including:
 
 - Spatial visualization under **72 rotation angles (5° interval)**  
@@ -87,7 +89,7 @@ This folder focuses on the **impact of ice floe rotation on the performance of t
 ---
 
 ### 6. Code
-Includes the implementation of the deep learning framework:
+This folder contains implementations of deep learning frameworks:
 - Network architecture (SuperPoint / SuperGlue-based)  
 - Data preprocessing modules  
 - Training and testing pipelines
@@ -145,9 +147,9 @@ Key advantages:
 
 ## **Acknowledgments**
 
-The codes are based
-on [SuperPoint](https://github.com/hanyoseob/pytorch-noise2void) and [SuperGlue](https://github.com/DegangWang97/IEEE_TGRS_BS3LNet).
-Thanks for their awesome work.
+The code is based
+on [SuperPoint]( https://github.com/magicleap/SuperPointPretrainedNetwork) and [SuperGlue](https://github.com/magicleap/SuperGluePretrainedNetwork).
+Thanks to their awesome work.
 
 ## **Contact**
 
