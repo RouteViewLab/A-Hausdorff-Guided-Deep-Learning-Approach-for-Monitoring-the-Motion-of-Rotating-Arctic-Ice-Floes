@@ -18,10 +18,12 @@ More specifically, the deep learning component of our framework is built upon tw
 
 <div align="center">
   <img src="https://github.com/RouteViewLab/A-Hausdorff-Guided-Deep-Learning-Approach-for-Monitoring-the-Motion-of-Rotating-Arctic-Ice-Floes/raw/main/SuperPoint%20Network.png" width="600"/>
+  <p><b>Figure 1.</b> SuperPoint Network for keypoint detection and descriptor extraction.</p>
 </div>
 
 <div align="center">
   <img src="https://github.com/RouteViewLab/A-Hausdorff-Guided-Deep-Learning-Approach-for-Monitoring-the-Motion-of-Rotating-Arctic-Ice-Floes/raw/main/SuperGlue%20Network.png" width="600"/>
+  <p><b>Figure 2.</b> SuperGlue Network for feature matching.</p>
 </div>
 
 In this framework, **SuperPoint** is employed to extract rotation-invariant keypoints and descriptors, while **SuperGlue** performs context-aware feature matching through graph neural network-based attention mechanisms. 
