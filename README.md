@@ -113,7 +113,7 @@ Rotation drastically alters geometric similarity, making direct matching unrelia
 
 ### 🖼️ Qualitative Comparison
 
-![Rotation Comparison](https://raw.githubusercontent.com/LZUFE-Machine-Learning/A-Hausdorff-Guided-Deep-Learning-Approach-for-Monitoring-the-Motion-of-Rotating-Arctic-Ice-Floes/main/Rotation%20Comparison%20Chart.png)
+![Rotation Comparison](https://raw.githubusercontent.com/LZUFE-Machine-Learning/A-Hausdorff-Guided-Deep-Learning-Approach-for-Monitoring-the-Motion-of-Rotating-Arctic-Ice-Floes/main/Rotation%20Comparison.png)
 
 #### 🔹 Before Rotation Alignment
 - Feature matches are **disordered and inconsistent**  
